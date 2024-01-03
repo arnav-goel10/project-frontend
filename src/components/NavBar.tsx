@@ -4,14 +4,9 @@ import { Box, Button, Typography } from "@mui/material";
 import { DarkModeSwitch } from "react-toggle-dark-mode";
 import { Link } from "react-router-dom";
 import LoginButton from "./LoginButton";
+import ThemeChangeButton from "./ThemeChangeButton";
 
 const NavBar = () => {
-  const [isDarkMode, setDarkMode] = React.useState(false);
-
-  const toggleDarkMode = (checked: boolean) => {
-    setDarkMode(checked);
-  };
-
   return (
     <Box
       style={{
@@ -48,11 +43,7 @@ const NavBar = () => {
         }}
       >
         <LoginButton />
-        <DarkModeSwitch
-          checked={isDarkMode}
-          onChange={toggleDarkMode}
-          size={60}
-        />
+        <ThemeChangeButton />
       </div>
     </Box>
   );
