@@ -5,6 +5,7 @@ import { DarkModeSwitch } from "react-toggle-dark-mode";
 import { Link } from "react-router-dom";
 import LoginButton from "./LoginButton";
 import ThemeChangeButton from "./ThemeChangeButton";
+import Logo from "./Logo";
 
 const NavBar = () => {
   return (
@@ -19,20 +20,7 @@ const NavBar = () => {
       }}
     >
       <div>
-        <Link to="/" style={{ display: "flex" }}>
-          <img src={logo} width="70" alt="Logo" />
-          <Typography
-            ml={2}
-            sx={{
-              fontSize: 45,
-              height: 20,
-              color: "orangered",
-              fontFamily: "fantasy",
-            }}
-          >
-            Cookit
-          </Typography>
-        </Link>
+        <Logo />
       </div>
 
       <div
