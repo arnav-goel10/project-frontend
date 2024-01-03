@@ -1,8 +1,4 @@
-import React from "react";
-import logo from "../assets/logo.png";
-import { Box, Button, Typography } from "@mui/material";
-import { DarkModeSwitch } from "react-toggle-dark-mode";
-import { Link } from "react-router-dom";
+import { Box } from "@mui/material";
 import LoginButton from "./LoginButton";
 import ThemeChangeButton from "./ThemeChangeButton";
 import Logo from "./Logo";
