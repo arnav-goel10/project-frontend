@@ -1,6 +1,6 @@
 import React from "react";
 import logo from "../assets/logo.png";
-import { Box, Typography } from "@mui/material";
+import { Box, Button, Typography } from "@mui/material";
 import { DarkModeSwitch } from "react-toggle-dark-mode";
 import { Link } from "react-router-dom";
 
@@ -17,15 +17,12 @@ const NavBar = () => {
         display: "flex",
         justifyContent: "space-between",
         alignItems: "center",
-        paddingTop: 15,
-        paddingLeft: 15,
-        paddingRight: 15,
-        paddingBottom: 15,
+        padding: 15,
         backgroundColor: "#f2f2f2",
         borderRadius: 15,
       }}
     >
-      <div style={{ display: "flex" }}>
+      <div>
         <Link to="/" style={{ display: "flex" }}>
           <img src={logo} width="70" alt="Logo" />
           <Typography
@@ -41,7 +38,29 @@ const NavBar = () => {
           </Typography>
         </Link>
       </div>
-      <div>
+
+      <div
+        style={{
+          display: "flex",
+          alignItems: "center",
+          gap: "50px",
+        }}
+      >
+        <Link to="/login">
+          <Button
+            variant="contained"
+            size="large"
+            sx={{
+              backgroundColor: "orangered",
+              padding: "10px 20px",
+              fontSize: "20px",
+              borderRadius: "30px",
+              fontFamily: "Segoe UI",
+            }}
+          >
+            LogIn
+          </Button>
+        </Link>
         <DarkModeSwitch
           checked={isDarkMode}
           onChange={toggleDarkMode}
