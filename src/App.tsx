@@ -1,10 +1,14 @@
 import React from "react";
-import logo from "./logo.svg";
-import "./App.css";
-import { Button } from "@mui/material";
+import { Routes, Route } from "react-router-dom";
+import LoginPage from "./pages/LoginPage";
+import SignupPage from "./pages/SignUpPage";
 
 function App() {
-  return <Button>Check</Button>;
+  return (
+    <Routes>
+      <Route path="/login" element={<LoginPage />} />
+      <Route path="/signup" element={<SignupPage />} />
+    </Routes>
+  );
 }
-
 export default App;
