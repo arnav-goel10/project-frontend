@@ -2,6 +2,7 @@ import React from "react";
 import logo from "../assets/logo.png";
 import { Box, Grid, Typography } from "@mui/material";
 import { DarkModeSwitch } from "react-toggle-dark-mode";
+import { Link } from "react-router-dom";
 
 const NavBar = () => {
   const [isDarkMode, setDarkMode] = React.useState(false);
@@ -19,23 +20,25 @@ const NavBar = () => {
         paddingLeft: 15,
         paddingRight: 15,
         paddingBottom: 15,
-        backgroundColor: "#fcfcfc",
+        backgroundColor: "#f2f2f2",
         borderRadius: 15,
       }}
     >
       <div style={{ display: "flex" }}>
-        <img src={logo} width="70" alt="Logo" />
-        <Typography
-          style={{
-            marginLeft: 15,
-            fontSize: 45,
-            height: 20,
-            color: "orangered",
-            fontFamily: "fantasy",
-          }}
-        >
-          Cookit
-        </Typography>
+        <Link to="/" style={{ display: "flex" }}>
+          <img src={logo} width="70" alt="Logo" />
+          <Typography
+            style={{
+              marginLeft: 15,
+              fontSize: 45,
+              height: 20,
+              color: "orangered",
+              fontFamily: "fantasy",
+            }}
+          >
+            Cookit
+          </Typography>
+        </Link>
       </div>
       <div>
         <DarkModeSwitch
