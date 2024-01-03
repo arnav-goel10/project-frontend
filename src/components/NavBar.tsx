@@ -3,6 +3,7 @@ import logo from "../assets/logo.png";
 import { Box, Button, Typography } from "@mui/material";
 import { DarkModeSwitch } from "react-toggle-dark-mode";
 import { Link } from "react-router-dom";
+import LoginButton from "./LoginButton";
 
 const NavBar = () => {
   const [isDarkMode, setDarkMode] = React.useState(false);
@@ -46,21 +47,7 @@ const NavBar = () => {
           gap: "50px",
         }}
       >
-        <Link to="/login">
-          <Button
-            variant="contained"
-            size="large"
-            sx={{
-              backgroundColor: "orangered",
-              padding: "10px 20px",
-              fontSize: "20px",
-              borderRadius: "30px",
-              fontFamily: "Segoe UI",
-            }}
-          >
-            LogIn
-          </Button>
-        </Link>
+        <LoginButton />
         <DarkModeSwitch
           checked={isDarkMode}
           onChange={toggleDarkMode}
