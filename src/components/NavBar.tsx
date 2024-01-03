@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../assets/logo.jpg";
+import logo from "../assets/logo.png";
 import { Box, Grid, Typography } from "@mui/material";
 import { DarkModeSwitch } from "react-toggle-dark-mode";
 
@@ -15,16 +15,19 @@ const NavBar = () => {
         display: "flex",
         justifyContent: "space-between",
         alignItems: "center",
-        marginTop: 15,
-        marginLeft: 15,
-        marginRight: 15,
+        paddingTop: 15,
+        paddingLeft: 15,
+        paddingRight: 15,
+        paddingBottom: 15,
+        backgroundColor: "#fcfcfc",
+        borderRadius: 15,
       }}
     >
       <div style={{ display: "flex" }}>
         <img src={logo} width="70" alt="Logo" />
         <Typography
           style={{
-            marginLeft: 30,
+            marginLeft: 15,
             fontSize: 45,
             height: 20,
             color: "orangered",
@@ -36,7 +39,6 @@ const NavBar = () => {
       </div>
       <div>
         <DarkModeSwitch
-          style={{}}
           checked={isDarkMode}
           onChange={toggleDarkMode}
           size={60}
