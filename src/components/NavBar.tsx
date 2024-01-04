@@ -2,7 +2,6 @@ import { Box } from "@mui/material";
 import LoginButton from "./LoginButton";
 import ThemeChangeButton from "./ThemeChangeButton";
 import Logo from "./Logo";
-import SignUp from "../pages/SignUpPage";
 import SignUpButton from "./SignUpButton";
 import SearchBar from "./SearchBar";
 
@@ -13,7 +12,7 @@ const NavBar = () => {
         display: "flex",
         justifyContent: "space-between",
         alignItems: "center",
-        padding: 15,
+        padding: "30px 30px 15px 30px",
         backgroundColor: "#f2f2f2",
         borderRadius: 15,
       }}

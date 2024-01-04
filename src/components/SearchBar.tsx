@@ -1,7 +1,5 @@
-import React from "react";
 import TextField from "@mui/material/TextField";
 import SearchIcon from "@mui/icons-material/Search";
-import ClearIcon from "@mui/icons-material/Clear";
 
 const SearchBar = () => {
   return (
