@@ -6,7 +6,17 @@ import SideBar from "../components/SideBar";
 const MainPage = () => {
   return (
     <>
-      <SideBar />
+      <Grid container>
+        <Grid item xs={3}>
+          <SideBar />
+        </Grid>
+        <Grid item xs={8}>
+          Main
+        </Grid>
+        <Grid item xs>
+          Filter
+        </Grid>
+      </Grid>
     </>
   );
 };
