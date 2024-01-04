@@ -15,6 +15,7 @@ const NavBar = () => {
         padding: "15px 30px 15px 30px",
         borderRadius: 15,
         backgroundColor: "#e6e6e6",
+        marginBottom: "20px",
       }}
     >
       <Grid>
