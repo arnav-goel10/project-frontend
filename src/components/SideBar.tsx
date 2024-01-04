@@ -2,7 +2,7 @@ import * as React from "react";
 import Box from "@mui/material/Box";
 import List from "@mui/material/List";
 import { ListSubheader } from "@mui/material";
-import SideBarListElement from "./SideBarListElement"; // Import the new component
+import SideBarListElement from "./SideBarListElement";
 
 export default function SelectedListItem() {
   const [selectedIndex, setSelectedIndex] = React.useState(0);
@@ -11,7 +11,6 @@ export default function SelectedListItem() {
     setSelectedIndex(index);
   };
 
-  // Example data for list items
   const cuisines = [
     "All",
     "Indian",

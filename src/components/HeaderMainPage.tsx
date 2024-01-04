@@ -1,6 +1,6 @@
 import { Avatar, Box, Typography } from "@mui/material";
 import React, { useState } from "react";
-import SelectedListItem from "./SideBar"; // Import with correct name
+import SelectedListItem from "./SideBar";
 
 const HeaderMainPage = () => {
   return (
