@@ -10,19 +10,17 @@ const Logo = () => {
       >
         <img src={logo} width="15%" alt="Logo" />
 
-        <Hidden mdDown>
-          <Typography
-            ml={2}
-            sx={{
-              fontSize: "3rem",
+        <Typography
+          ml={2}
+          sx={{
+            fontSize: "3rem",
 
-              color: "orangered",
-              fontFamily: "fantasy",
-            }}
-          >
-            Cookit
-          </Typography>
-        </Hidden>
+            color: "orangered",
+            fontFamily: "fantasy",
+          }}
+        >
+          Cookit
+        </Typography>
       </div>
     </Link>
   );
