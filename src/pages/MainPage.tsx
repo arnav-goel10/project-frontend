@@ -16,7 +16,7 @@ const MainPage: React.FC = () => {
         <SideBar onCuisineClick={handleCuisineSelect} />
       </Grid>
 
-      <Grid item xs={7}>
+      <Grid item xs={7} sx={{ mt: "2rem" }}>
         <HeaderMainPage selectedCuisine={selectedCuisine} />
       </Grid>
     </Grid>
