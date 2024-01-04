@@ -1,7 +1,9 @@
 import TextField from "@mui/material/TextField";
 import SearchIcon from "@mui/icons-material/Search";
+import { useTheme } from "@mui/material";
 
 const SearchBar = () => {
+  const theme = useTheme();
   return (
     <TextField
       id="outlined-search"
@@ -10,13 +12,13 @@ const SearchBar = () => {
       InputProps={{
         endAdornment: <SearchIcon />,
         style: {
-          borderRadius: "40px",
+          borderRadius: "2rem",
           backgroundColor: "white",
-          padding: "2px 20px",
-          fontSize: "20px",
+          padding: "0.25rem 2rem",
+          fontSize: "1rem",
         },
       }}
-      sx={{ width: 600 }}
+      sx={{ width: "100%" }}
     />
   );
 };
