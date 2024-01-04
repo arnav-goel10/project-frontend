@@ -8,6 +8,7 @@ interface Props {
   toggleTheme: () => void;
 }
 const NavBar: React.FC<Props> = ({ toggleTheme }) => {
+  const theme = useTheme();
   return (
     <Box
       component="div"
