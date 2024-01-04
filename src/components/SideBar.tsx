@@ -42,13 +42,17 @@ export default function SelectedListItem() {
         width: "100%",
         maxWidth: 360,
         bgcolor: "background.paper",
-        paddingTop: "3rem",
+        paddingTop: "2rem",
         paddingLeft: "2rem",
         paddingRight: "4rem",
         fontFamily: "fantasy",
       }}
     >
-      <ListSubheader sx={{ fontSize: "1.5rem" }}>Cuisines</ListSubheader>
+      <ListSubheader
+        sx={{ fontSize: "1.5rem", fontWeight: "bold", fontFamily: "Segoe UI" }}
+      >
+        Cuisines
+      </ListSubheader>
       <List component="nav">
         {cuisines.map((cuisine, index) => (
           <SideBarListElement

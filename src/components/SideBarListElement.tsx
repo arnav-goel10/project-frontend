@@ -17,7 +17,11 @@ const SideBarListElement: React.FC<SideBarListElementProps> = ({
   onClick,
 }) => {
   return (
-    <ListItemButton selected={selected} onClick={onClick}>
+    <ListItemButton
+      selected={selected}
+      onClick={onClick}
+      sx={{ borderRadius: "2rem", margin: "0.25rem 1.5rem" }}
+    >
       {icon && <ListItemIcon>{icon}</ListItemIcon>}
       <ListItemText primary={label} />
     </ListItemButton>
