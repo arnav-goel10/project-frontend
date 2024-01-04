@@ -2,6 +2,8 @@ import { Box } from "@mui/material";
 import LoginButton from "./LoginButton";
 import ThemeChangeButton from "./ThemeChangeButton";
 import Logo from "./Logo";
+import SignUp from "../pages/SignUpPage";
+import SignUpButton from "./SignUpButton";
 
 const NavBar = () => {
   return (
@@ -26,7 +28,16 @@ const NavBar = () => {
           gap: "50px",
         }}
       >
-        <LoginButton />
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            gap: "15px",
+          }}
+        >
+          <LoginButton />
+          <SignUpButton />
+        </div>
         <ThemeChangeButton />
       </div>
     </Box>
