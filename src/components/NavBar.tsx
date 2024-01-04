@@ -4,10 +4,10 @@ import ThemeChangeButton from "./ThemeChangeButton";
 import Logo from "./Logo";
 import SignUpButton from "./SignUpButton";
 import SearchBar from "./SearchBar";
-
-const NavBar = () => {
-  const theme = useTheme();
-
+interface Props {
+  toggleTheme: () => void;
+}
+const NavBar: React.FC<Props> = ({ toggleTheme }) => {
   return (
     <Box
       component="div"
@@ -29,7 +29,7 @@ const NavBar = () => {
           <LoginButton />
           <SignUpButton />
         </Box>
-        <ThemeChangeButton />
+        <ThemeChangeButton toggleTheme={toggleTheme} />
       </Box>
     </Box>
   );
