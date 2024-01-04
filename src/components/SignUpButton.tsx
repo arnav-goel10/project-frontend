@@ -10,8 +10,8 @@ const SignUpButton = () => {
         size="large"
         sx={{
           backgroundColor: "orangered",
-          padding: "1rem 3rem",
-          fontSize: "1rem",
+          padding: "1.5vh 4.5vw",
+          fontSize: "2.5vh",
           borderRadius: "30px",
           fontFamily: "Segoe UI",
           width: "33%",

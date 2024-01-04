@@ -8,7 +8,11 @@ const ThemeChangeButton = () => {
     setDarkMode(checked);
   };
   return (
-    <DarkModeSwitch checked={isDarkMode} onChange={toggleDarkMode} size={60} />
+    <DarkModeSwitch
+      checked={isDarkMode}
+      onChange={toggleDarkMode}
+      size={"4.5vw"}
+    />
   );
 };
 

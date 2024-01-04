@@ -14,8 +14,8 @@ const SearchBar = () => {
         style: {
           borderRadius: "2rem",
           backgroundColor: "white",
-          padding: "0.25rem 2rem",
-          fontSize: "1rem",
+          padding: "0.15vh 1.5vw",
+          fontSize: "2vh",
         },
       }}
       sx={{ width: "100%" }}

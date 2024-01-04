@@ -17,6 +17,7 @@ const NavBar = () => {
       borderRadius="1rem"
       sx={{ backgroundColor: "#e6e6e6" }}
       justifyContent={"space-between"}
+      height={"10vh"}
     >
       <Box display="flex" alignItems="center">
         <Logo />
