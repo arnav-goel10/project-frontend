@@ -5,13 +5,11 @@ import logo from "../assets/logo.png";
 const Logo = () => {
   return (
     <Link to="/" style={{ display: "flex" }}>
-      <div
-        style={{ display: "flex", alignItems: "center", objectFit: "cover" }}
-      >
+      <div style={{ display: "flex", alignItems: "center" }}>
         <img src={logo} width="15%" alt="Logo" />
 
         <Typography
-          ml={2}
+          ml={"1rem"}
           sx={{
             fontSize: "3rem",
 
