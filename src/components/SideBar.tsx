@@ -5,7 +5,7 @@ import { ListSubheader } from "@mui/material";
 import SideBarListElement from "./SideBarListElement"; // Import the new component
 
 export default function SelectedListItem() {
-  const [selectedIndex, setSelectedIndex] = React.useState(1);
+  const [selectedIndex, setSelectedIndex] = React.useState(0);
 
   const handleListItemClick = (index: number) => {
     setSelectedIndex(index);
@@ -13,6 +13,7 @@ export default function SelectedListItem() {
 
   // Example data for list items
   const cuisines = [
+    "All",
     "Indian",
     "Chinese",
     "Italian",
