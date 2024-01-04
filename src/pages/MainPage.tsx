@@ -1,24 +1,25 @@
-import { Grid, Hidden } from "@mui/material";
-import React from "react";
-import NavBar from "../components/NavBar";
+import React, { useState } from "react";
+import { Grid } from "@mui/material";
 import SideBar from "../components/SideBar";
 import HeaderMainPage from "../components/HeaderMainPage";
 
-const MainPage = () => {
+const MainPage: React.FC = () => {
+  const [selectedCuisine, setSelectedCuisine] = useState<string>();
+
+  const handleCuisineSelect = (cuisine: string) => {
+    setSelectedCuisine(cuisine);
+  };
+
   return (
-    <>
-      <Grid container>
-        <Grid item xs={3}>
-          <SideBar />
-        </Grid>
-        <Grid item xs={7} sx={{ margin: "3rem 2rem" }}>
-          <HeaderMainPage />
-        </Grid>
-        <Grid item xs>
-          Filter
-        </Grid>
+    <Grid container>
+      <Grid item xs={3}>
+        <SideBar onCuisineClick={handleCuisineSelect} />
       </Grid>
-    </>
+
+      <Grid item xs={7}>
+        <HeaderMainPage selectedCuisine={selectedCuisine} />
+      </Grid>
+    </Grid>
   );
 };
 

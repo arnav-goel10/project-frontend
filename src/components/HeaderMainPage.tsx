@@ -2,7 +2,11 @@ import { Avatar, Box, Typography } from "@mui/material";
 import React, { useState } from "react";
 import SelectedListItem from "./SideBar";
 
-const HeaderMainPage = () => {
+interface Props {
+  selectedCuisine?: string;
+}
+
+const HeaderMainPage: React.FC<Props> = ({ selectedCuisine }) => {
   return (
     <Box sx={{ display: "flex", alignItems: "center" }}>
       <Avatar
@@ -14,7 +18,9 @@ const HeaderMainPage = () => {
         fontWeight="bold"
         sx={{ ml: 5, fontSize: 50 }}
       >
-        Indian Cuisine
+        {selectedCuisine === undefined || selectedCuisine === "All"
+          ? "All Cuisines"
+          : selectedCuisine + "  Cuisine"}
       </Typography>
     </Box>
   );
