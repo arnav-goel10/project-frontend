@@ -5,6 +5,7 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import SignUpPage from "./pages/SignUpPage";
 import { BrowserRouter } from "react-router-dom";
+import { CssBaseline } from "@mui/material";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
@@ -12,6 +13,7 @@ const root = ReactDOM.createRoot(
 root.render(
   <BrowserRouter>
     <React.StrictMode>
+      <CssBaseline />
       <App />
     </React.StrictMode>
   </BrowserRouter>

@@ -9,17 +9,8 @@ import { Grid, Hidden } from "@mui/material";
 function App() {
   return (
     <>
-      <Grid container spacing={2}>
-        <Grid xs={12}>
-          <NavBar />
-        </Grid>
-        <Hidden lgDown>
-          <Grid lg={2} marginLeft={"1.5rem"}>
-            Aside
-          </Grid>
-        </Hidden>
-        <Grid xs>Main</Grid>
-      </Grid>
+      <NavBar />
+
       <Routes>
         <Route path="/login" element={<LoginPage />} />
         <Route path="/signup" element={<SignupPage />} />

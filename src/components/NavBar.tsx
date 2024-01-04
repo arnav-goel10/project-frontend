@@ -1,4 +1,4 @@
-import { Box } from "@mui/material";
+import { Box, Grid } from "@mui/material";
 import LoginButton from "./LoginButton";
 import ThemeChangeButton from "./ThemeChangeButton";
 import Logo from "./Logo";
@@ -12,25 +12,25 @@ const NavBar = () => {
         display: "flex",
         justifyContent: "space-between",
         alignItems: "center",
-        padding: "30px 30px 15px 30px",
-        backgroundColor: "#f2f2f2",
+        padding: "15px 30px 15px 30px",
         borderRadius: 15,
+        backgroundColor: "#e6e6e6",
       }}
     >
-      <div>
+      <Grid>
         <Logo />
-      </div>
-      <div>
+      </Grid>
+      <Grid>
         <SearchBar />
-      </div>
-      <div
+      </Grid>
+      <Grid
         style={{
           display: "flex",
           alignItems: "center",
           gap: "50px",
         }}
       >
-        <div
+        <Grid
           style={{
             display: "flex",
             alignItems: "center",
@@ -39,9 +39,9 @@ const NavBar = () => {
         >
           <LoginButton />
           <SignUpButton />
-        </div>
+        </Grid>
         <ThemeChangeButton />
-      </div>
+      </Grid>
     </Box>
   );
 };
