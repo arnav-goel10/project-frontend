@@ -4,6 +4,7 @@ import ThemeChangeButton from "./ThemeChangeButton";
 import Logo from "./Logo";
 import SignUp from "../pages/SignUpPage";
 import SignUpButton from "./SignUpButton";
+import SearchBar from "./SearchBar";
 
 const NavBar = () => {
   return (
@@ -20,7 +21,9 @@ const NavBar = () => {
       <div>
         <Logo />
       </div>
-
+      <div>
+        <SearchBar />
+      </div>
       <div
         style={{
           display: "flex",
