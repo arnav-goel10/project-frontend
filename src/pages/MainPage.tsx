@@ -19,6 +19,18 @@ const MainPage: React.FC = () => {
 
       <Grid item xs={7} sx={{ mt: "2rem" }}>
         <HeaderMainPage selectedCuisine={selectedCuisine} />
+        <Grid
+          item
+          xs={10}
+          sx={{
+            display: "flex",
+            textAlign: "start",
+            marginLeft: "3.5rem",
+            marginTop: "2rem",
+          }}
+        >
+          Sorting Components
+        </Grid>
       </Grid>
       <Grid item xs={2}>
         Filter
