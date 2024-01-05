@@ -3,9 +3,9 @@ import Button from "@mui/material/Button";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 
-const NewTopSort = () => {
+const CardViewSort = () => {
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
-  const [dashboardContent, setDashboardContent] = React.useState("New");
+  const [dashboardContent, setDashboardContent] = React.useState("Spacious");
 
   const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
     setAnchorEl(event.currentTarget);
@@ -41,11 +41,15 @@ const NewTopSort = () => {
           "aria-labelledby": "basic-button",
         }}
       >
-        <MenuItem onClick={() => handleMenuItemClick("New")}>New</MenuItem>
-        <MenuItem onClick={() => handleMenuItemClick("Top")}>Top</MenuItem>
+        <MenuItem onClick={() => handleMenuItemClick("Spacious")}>
+          Spacious
+        </MenuItem>
+        <MenuItem onClick={() => handleMenuItemClick("Compact")}>
+          Compact
+        </MenuItem>
       </Menu>
     </div>
   );
 };
 
-export default NewTopSort;
+export default CardViewSort;
