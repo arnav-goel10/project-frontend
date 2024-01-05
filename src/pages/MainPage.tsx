@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Grid, useTheme } from "@mui/material";
 import SideBar from "../components/SideBar";
 import HeaderMainPage from "../components/HeaderMainPage";
+import SortingToggles from "../components/SortingToggles";
 
 const MainPage: React.FC = () => {
   const theme = useTheme();
@@ -29,7 +30,7 @@ const MainPage: React.FC = () => {
             marginTop: "2rem",
           }}
         >
-          Sorting Components
+          <SortingToggles />
         </Grid>
       </Grid>
       <Grid item xs={2}>
