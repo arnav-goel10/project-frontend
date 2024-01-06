@@ -2,7 +2,6 @@ import * as React from "react";
 import Button from "@mui/material/Button";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
-import { SvgIcon } from "@mui/material";
 import KeyboardDoubleArrowUpIcon from "@mui/icons-material/KeyboardDoubleArrowUp";
 import NewReleasesIcon from "@mui/icons-material/NewReleases";
 
@@ -46,7 +45,7 @@ const NewTopSort = () => {
         aria-haspopup="true"
         aria-expanded={anchorEl ? "true" : undefined}
         onClick={handleClick}
-        sx={{ color: "orangered" }}
+        sx={{ color: "orangered", fontSize: 18 }}
       >
         {dashboardContent === "New" ? newIcon : topIcon}
         &nbsp;&nbsp;

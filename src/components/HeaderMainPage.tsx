@@ -1,6 +1,5 @@
 import { Avatar, Box, Typography } from "@mui/material";
-import React, { useState } from "react";
-import SelectedListItem from "./SideBar";
+import React from "react";
 
 interface Props {
   selectedCuisine?: string;

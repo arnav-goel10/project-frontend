@@ -2,7 +2,6 @@ import * as React from "react";
 import Button from "@mui/material/Button";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
-import { SvgIcon } from "@mui/material";
 
 const NewTopSort = () => {
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
@@ -55,7 +54,7 @@ const NewTopSort = () => {
         aria-haspopup="true"
         aria-expanded={anchorEl ? "true" : undefined}
         onClick={handleClick}
-        sx={{ color: "orangered" }}
+        sx={{ color: "orangered", fontSize: 18 }}
       >
         {dashboardContent === "Spacious" ? SpaciousIcon : CompactIcon}
         &nbsp;&nbsp;

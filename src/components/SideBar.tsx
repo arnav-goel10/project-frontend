@@ -1,7 +1,7 @@
 import * as React from "react";
 import { ListSubheader } from "@mui/material";
 import SideBarListElement from "./SideBarListElement";
-import { Box, List, ListItemButton, ListItemText } from "@mui/material";
+import { Box, List } from "@mui/material";
 
 interface Props {
   onCuisineClick: (cuisine: string) => void;
