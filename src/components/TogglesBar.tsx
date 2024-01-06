@@ -1,3 +1,4 @@
+import React from "react";
 import NewTopSort from "./NewTopSort";
 import CardViewSort from "./CardViewSort";
 import CreatePostButton from "./CreatePostButton";
@@ -11,11 +12,11 @@ const TogglesBar = () => {
         alignItems: "center",
       }}
     >
-      <div style={{ display: "flex" }}>
+      <div style={{ display: "flex", flex: 1 }}>
         <NewTopSort />
         <CardViewSort />
       </div>
-      <div style={{ display: "flex" }}>
+      <div>
         <CreatePostButton />
       </div>
     </div>
