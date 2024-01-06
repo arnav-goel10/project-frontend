@@ -3,6 +3,8 @@ import Button from "@mui/material/Button";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import { SvgIcon } from "@mui/material";
+import KeyboardDoubleArrowUpIcon from "@mui/icons-material/KeyboardDoubleArrowUp";
+import NewReleasesIcon from "@mui/icons-material/NewReleases";
 
 const NewTopSort = () => {
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
@@ -22,29 +24,18 @@ const NewTopSort = () => {
   };
 
   const newIcon = (
-    <svg
-      fill="currentColor"
-      height="16"
-      icon-name="view-card-outline"
-      viewBox="0 0 20 20"
-      width="16"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path d="M17.882 1H2.118A1.12 1.12 0 0 0 1 2.119v15.762A1.119 1.119 0 0 0 2.118 19h15.764A1.12 1.12 0 0 0 19 17.881V2.119A1.12 1.12 0 0 0 17.882 1Zm-.132 16.75H2.25v-7.138h15.5v7.138ZM2.25 9.362V2.25h15.5v7.112H2.25Z"></path>
-    </svg>
+    <NewReleasesIcon
+      sx={{
+        fontSize: 22,
+      }}
+    />
   );
-
   const topIcon = (
-    <svg
-      fill="currentColor"
-      height="16"
-      icon-name="view-card-outline"
-      viewBox="0 0 20 20"
-      width="16"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path d="M17.882 1H2.118A1.12 1.12 0 0 0 1 2.119v15.762A1.119 1.119 0 0 0 2.118 19h15.764A1.12 1.12 0 0 0 19 17.881V2.119A1.12 1.12 0 0 0 17.882 1Zm-.132 16.75H2.25v-7.138h15.5v7.138ZM2.25 9.362V2.25h15.5v7.112H2.25Z"></path>
-    </svg>
+    <KeyboardDoubleArrowUpIcon
+      sx={{
+        fontSize: 22,
+      }}
+    />
   );
 
   return (
@@ -57,9 +48,9 @@ const NewTopSort = () => {
         onClick={handleClick}
         sx={{ color: "orangered" }}
       >
-        {dashboardContent}
-
         {dashboardContent === "New" ? newIcon : topIcon}
+        &nbsp;&nbsp;
+        {dashboardContent}
       </Button>
       <Menu
         id="basic-menu"
@@ -71,10 +62,10 @@ const NewTopSort = () => {
         }}
       >
         <MenuItem onClick={() => handleMenuItemClick("New")}>
-          {newIcon} New
+          {newIcon}&nbsp;&nbsp;New
         </MenuItem>
         <MenuItem onClick={() => handleMenuItemClick("Top")}>
-          {topIcon} Top
+          {topIcon}&nbsp;&nbsp;Top
         </MenuItem>
       </Menu>
     </div>

@@ -21,7 +21,7 @@ const NewTopSort = () => {
     setAnchorEl(null);
   };
 
-  const newIcon = (
+  const SpaciousIcon = (
     <svg
       fill="currentColor"
       height="16"
@@ -34,16 +34,16 @@ const NewTopSort = () => {
     </svg>
   );
 
-  const topIcon = (
+  const CompactIcon = (
     <svg
       fill="currentColor"
       height="16"
-      icon-name="view-card-outline"
+      icon-name="view-classic-outline"
       viewBox="0 0 20 20"
       width="16"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <path d="M17.882 1H2.118A1.12 1.12 0 0 0 1 2.119v15.762A1.119 1.119 0 0 0 2.118 19h15.764A1.12 1.12 0 0 0 19 17.881V2.119A1.12 1.12 0 0 0 17.882 1Zm-.132 16.75H2.25v-7.138h15.5v7.138ZM2.25 9.362V2.25h15.5v7.112H2.25Z"></path>
+      <path d="M17.882 2H2.118A1.118 1.118 0 0 0 1 3.116v13.768A1.118 1.118 0 0 0 2.118 18h15.764A1.118 1.118 0 0 0 19 16.884V3.116A1.118 1.118 0 0 0 17.882 2ZM2.25 3.25h15.5V7H2.25V3.25Zm15.5 13.5H2.25v-3.5h15.5v3.5Zm0-4.75H2.25V8.25h15.5V12Z"></path>
     </svg>
   );
 
@@ -57,7 +57,8 @@ const NewTopSort = () => {
         onClick={handleClick}
         sx={{ color: "orangered" }}
       >
-        {dashboardContent === "Spacious" ? newIcon : topIcon}
+        {dashboardContent === "Spacious" ? SpaciousIcon : CompactIcon}
+        &nbsp;&nbsp;
         {dashboardContent}
       </Button>
       <Menu
@@ -70,10 +71,10 @@ const NewTopSort = () => {
         }}
       >
         <MenuItem onClick={() => handleMenuItemClick("Spacious")}>
-          {newIcon} Spacious
+          {SpaciousIcon} &nbsp;&nbsp;Spacious
         </MenuItem>
         <MenuItem onClick={() => handleMenuItemClick("Compact")}>
-          {topIcon} Compact
+          {CompactIcon}&nbsp;&nbsp; Compact
         </MenuItem>
       </Menu>
     </div>
