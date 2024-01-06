@@ -5,6 +5,7 @@ import SignupPage from "./pages/SignUpPage";
 import MainPage from "./pages/MainPage";
 import NavBar from "./components/NavBar";
 import { Grid, Hidden, ThemeProvider, createTheme } from "@mui/material";
+import NewPostPage from "./pages/NewPostPage";
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
@@ -30,6 +31,7 @@ function App() {
           <Route path="/login" element={<LoginPage />} />
           <Route path="/signup" element={<SignupPage />} />
           <Route path="/" element={<MainPage />} />
+          <Route path="/newpost" element={<NewPostPage />} />
         </Routes>
       </ThemeProvider>
     </>

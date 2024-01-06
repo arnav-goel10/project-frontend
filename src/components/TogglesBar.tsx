@@ -1,7 +1,8 @@
 import NewTopSort from "./NewTopSort";
 import CardViewSort from "./CardViewSort";
 import CreatePostButton from "./CreatePostButton";
-import { Grid, Stack } from "@mui/material";
+import { Grid } from "@mui/material";
+import { Link } from "react-router-dom";
 
 const TogglesBar = () => {
   return (
@@ -13,7 +14,9 @@ const TogglesBar = () => {
         <CardViewSort />
       </Grid>
       <Grid item xs={8} textAlign={"end"}>
-        <CreatePostButton />
+        <Link to="/newpost">
+          <CreatePostButton />
+        </Link>
       </Grid>
     </Grid>
   );
