@@ -1,25 +1,21 @@
-import React from "react";
 import NewTopSort from "./NewTopSort";
 import CardViewSort from "./CardViewSort";
 import CreatePostButton from "./CreatePostButton";
+import { Grid, Stack } from "@mui/material";
 
 const TogglesBar = () => {
   return (
-    <div
-      style={{
-        display: "flex",
-        justifyContent: "space-between",
-        alignItems: "center",
-      }}
-    >
-      <div style={{ display: "flex", flex: 1 }}>
+    <Grid container alignItems={"center"} textAlign={"start"} mr={"3rem"}>
+      <Grid item xs={2}>
         <NewTopSort />
+      </Grid>
+      <Grid item xs={2}>
         <CardViewSort />
-      </div>
-      <div>
+      </Grid>
+      <Grid item xs={8} textAlign={"end"}>
         <CreatePostButton />
-      </div>
-    </div>
+      </Grid>
+    </Grid>
   );
 };
 
