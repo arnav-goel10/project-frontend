@@ -6,7 +6,7 @@ import { SvgIcon } from "@mui/material";
 
 const NewTopSort = () => {
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
-  const [dashboardContent, setDashboardContent] = React.useState("New"); // Initial selection
+  const [dashboardContent, setDashboardContent] = React.useState("Spacious"); // Initial selection
 
   const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
     setAnchorEl(event.currentTarget);
@@ -57,9 +57,8 @@ const NewTopSort = () => {
         onClick={handleClick}
         sx={{ color: "orangered" }}
       >
+        {dashboardContent === "Spacious" ? newIcon : topIcon}
         {dashboardContent}
-
-        {dashboardContent === "New" ? newIcon : topIcon}
       </Button>
       <Menu
         id="basic-menu"
@@ -70,11 +69,11 @@ const NewTopSort = () => {
           "aria-labelledby": "basic-button",
         }}
       >
-        <MenuItem onClick={() => handleMenuItemClick("New")}>
-          {newIcon} New
+        <MenuItem onClick={() => handleMenuItemClick("Spacious")}>
+          {newIcon} Spacious
         </MenuItem>
-        <MenuItem onClick={() => handleMenuItemClick("Top")}>
-          {topIcon} Top
+        <MenuItem onClick={() => handleMenuItemClick("Compact")}>
+          {topIcon} Compact
         </MenuItem>
       </Menu>
     </div>
