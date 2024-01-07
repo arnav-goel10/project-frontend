@@ -4,7 +4,7 @@ import LoginPage from "./pages/LoginPage";
 import SignupPage from "./pages/SignUpPage";
 import MainPage from "./pages/MainPage";
 import NavBar from "./components/NavBar";
-import { Grid, Hidden, ThemeProvider, createTheme } from "@mui/material";
+import { ThemeProvider, createTheme } from "@mui/material";
 import NewPostPage from "./pages/NewPostPage";
 
 function App() {

@@ -1,11 +1,10 @@
 import React, { useState } from "react";
-import { Grid, useTheme } from "@mui/material";
+import { Grid } from "@mui/material";
 import SideBar from "../components/SideBar";
 import HeaderMainPage from "../components/HeaderMainPage";
 import TogglesBar from "../components/TogglesBar";
 
 const MainPage: React.FC = () => {
-  const theme = useTheme();
   const [selectedCuisine, setSelectedCuisine] = useState<string>();
 
   const handleCuisineSelect = (cuisine: string) => {
