@@ -1,11 +1,12 @@
 import * as React from "react";
-import { ListSubheader } from "@mui/material";
+import { ListSubheader, useTheme } from "@mui/material";
 import SideBarListElement from "./SideBarListElement";
 import { Box, List } from "@mui/material";
 
 interface Props {
   onCuisineClick: (cuisine: string) => void;
 }
+
 const cuisines = [
   "All",
   "Indian",
@@ -37,6 +38,7 @@ const SideBar: React.FC<Props> = ({ onCuisineClick }) => {
     setSelectedIndex(index);
     onCuisineClick(cuisine);
   };
+  const theme = useTheme();
   return (
     <>
       <Box
@@ -48,6 +50,7 @@ const SideBar: React.FC<Props> = ({ onCuisineClick }) => {
           paddingLeft: "2rem",
           paddingRight: "4rem",
           fontFamily: "fantasy",
+          color: theme.palette.secondary.light,
         }}
       >
         <ListSubheader

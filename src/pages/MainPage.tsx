@@ -3,6 +3,7 @@ import { Grid } from "@mui/material";
 import SideBar from "../components/SideBar";
 import HeaderMainPage from "../components/HeaderMainPage";
 import TogglesBar from "../components/TogglesBar";
+import { useTheme } from "@mui/material";
 
 const MainPage: React.FC = () => {
   const [selectedCuisine, setSelectedCuisine] = useState<string>();
@@ -10,9 +11,9 @@ const MainPage: React.FC = () => {
   const handleCuisineSelect = (cuisine: string) => {
     setSelectedCuisine(cuisine);
   };
-
+  const theme = useTheme();
   return (
-    <Grid container>
+    <Grid container sx={{ bgcolor: theme.palette.primary.contrastText }}>
       <Grid item xs={3}>
         <SideBar onCuisineClick={handleCuisineSelect} />
       </Grid>
