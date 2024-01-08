@@ -13,7 +13,7 @@ const SearchBar = () => {
         endAdornment: <SearchIcon />,
         style: {
           borderRadius: "2rem",
-          backgroundColor: "white",
+          backgroundColor: theme.palette.background.default,
           padding: "0.15vh 1.5vw",
           fontSize: "2vh",
         },
