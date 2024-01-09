@@ -12,7 +12,6 @@ const Logo = () => {
           ml={"1rem"}
           sx={{
             fontSize: "3rem",
-
             color: "orangered",
             fontFamily: "fantasy",
           }}

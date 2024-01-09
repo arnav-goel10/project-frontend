@@ -51,11 +51,12 @@ const SideBar: React.FC<Props> = ({ onCuisineClick }) => {
           paddingRight: "5rem",
           fontFamily: "fantasy",
           color: theme.palette.secondary.light,
+          borderRight: "1px solid lightgrey",
         }}
       >
         <ListSubheader
           sx={{
-            fontSize: "1.5rem",
+            fontSize: "1.75rem",
             fontWeight: "bold",
             fontFamily: "Segoe UI",
           }}

@@ -3,7 +3,7 @@ import { Routes, Route } from "react-router-dom";
 import LoginPage from "./pages/LoginPage";
 import SignupPage from "./pages/SignUpPage";
 import MainPage from "./pages/MainPage";
-import NavBar from "./components/NavBar";
+import NavBar from "./components/navbar/NavBar";
 import { ThemeProvider, createTheme } from "@mui/material";
 import NewPostPage from "./pages/NewPostPage";
 

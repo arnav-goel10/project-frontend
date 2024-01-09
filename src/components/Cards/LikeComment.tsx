@@ -11,12 +11,14 @@ const LikeComment = () => {
         <div
           style={{
             marginLeft: "2rem",
-            backgroundColor: "lightgrey",
+            backgroundColor: "#c9c9c9",
             padding: "0.25rem 1rem",
             borderRadius: "5rem",
             display: "flex",
             alignItems: "center", // Align icons vertically within the div
             justifyContent: "center",
+            marginBottom: "1rem",
+            marginTop: "0.5rem",
           }}
         >
           <LikeButton count={likecount} />

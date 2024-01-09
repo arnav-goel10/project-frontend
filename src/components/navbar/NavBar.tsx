@@ -18,7 +18,12 @@ const NavBar: React.FC<Props> = ({ toggleTheme }) => {
       display="flex"
       alignItems="center"
       padding="0.5rem 1.5rem"
-      sx={{ backgroundColor: theme.palette.background.default }}
+      sx={{
+        backgroundColor: theme.palette.background.default,
+        borderBottom: `1px solid ${
+          theme.palette.mode === "light" ? "lightgrey" : "black"
+        }`,
+      }}
       justifyContent="space-between"
       height="10vh"
     >

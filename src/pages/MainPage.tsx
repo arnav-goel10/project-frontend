@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import { Grid, Stack, styled } from "@mui/material";
-import SideBar from "../components/SideBar";
-import HeaderMainPage from "../components/HeaderMainPage";
-import TogglesBar from "../components/TogglesBar";
+import SideBar from "../components/sidebar/SideBar";
+import HeaderMainPage from "../components/mainpage/HeaderMainPage";
+import TogglesBar from "../components/mainpage/TogglesBar";
 import { useTheme } from "@mui/material";
-import CardSpacious from "../components/CardSpacious";
+import CardSpaciousList from "../components/Cards/spacious/CardSpaciousList";
 
 const MainPage: React.FC = () => {
   // State to store the selected cuisine
@@ -50,16 +50,7 @@ const MainPage: React.FC = () => {
             <Item>
               <TogglesBar />
             </Item>
-
-            <CardSpacious
-              image={
-                "https://www.blueosa.com/wp-content/uploads/2020/01/the-best-top-10-indian-dishes.jpg"
-              }
-              title={"Recipe"}
-              text={
-                "CHECKINGLOLOLOLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLl"
-              }
-            />
+            <CardSpaciousList />
           </Stack>
         </Grid>
       </Grid>
