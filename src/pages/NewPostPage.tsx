@@ -10,6 +10,7 @@ import Container from "@mui/material/Container";
 import MapsUgcIcon from "@mui/icons-material/MapsUgc";
 
 export default function CreatePost() {
+  // State to store form values
   const [postData, setPostData] = React.useState({
     title: "",
     text: "",
@@ -17,18 +18,22 @@ export default function CreatePost() {
     video: null,
   });
 
+  // Function to handle changes to our form
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setPostData({ ...postData, [event.target.name]: event.target.value });
   };
 
+  // Function to handle image upload
   const handleImageUpload = (image: any) => {
     setPostData({ ...postData, image });
   };
 
+  // Function to handle video upload
   const handleVideoUpload = (video: any) => {
     setPostData({ ...postData, video });
   };
 
+  // Function to handle form submission
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     // Handle form submission logic here, e.g., send data to a server

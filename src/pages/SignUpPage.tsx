@@ -11,9 +11,13 @@ import Container from "@mui/material/Container";
 import { Link } from "react-router-dom";
 
 export default function SignUp() {
+  // Handle the submit event of the form
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    // Prevent the default action of the form
     event.preventDefault();
+    // Create a new FormData object from the form
     const data = new FormData(event.currentTarget);
+    // Log the email and password to the console
     console.log({
       email: data.get("email"),
       password: data.get("password"),

@@ -10,6 +10,7 @@ const SearchBar = () => {
       variant="outlined"
       placeholder="Search Cookit"
       InputProps={{
+        // add an icon to the end of the input
         endAdornment: <SearchIcon />,
         style: {
           borderRadius: "2rem",
