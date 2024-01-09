@@ -1,4 +1,3 @@
-import { Button } from "@mui/material";
 import LikeComment from "./LikeComment";
 
 interface Props {
@@ -13,7 +12,7 @@ const CardSpacious = ({ image, title, text, video }: Props) => {
     <div
       style={{
         width: "auto",
-        backgroundColor: "red",
+        backgroundColor: "white",
         padding: "0.5rem 1rem",
         borderRadius: "1rem",
       }}

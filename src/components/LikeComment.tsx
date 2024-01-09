@@ -1,14 +1,22 @@
-import { Stack } from "@mui/material";
-import React from "react";
+import { Button, Stack } from "@mui/material";
+import { useState } from "react";
+import Heart from "react-animated-heart";
+import LikeButton from "./LikeButton";
 
 const LikeComment = () => {
+  const [isClick, setClick] = useState(false);
+  const likecount = 3;
   return (
-    <Stack
-      direction={"row"}
-      style={{ marginTop: "1rem", marginLeft: "1.5rem" }}
-    >
-      <div>Loike</div>
-    </Stack>
+    <>
+      <Stack
+        direction={"row"}
+        style={{ marginTop: "0rem", marginLeft: "0rem" }}
+      >
+        <Heart isClick={isClick} onClick={() => setClick(!isClick)} />
+        <LikeButton />
+        {likecount}
+      </Stack>
+    </>
   );
 };
 
