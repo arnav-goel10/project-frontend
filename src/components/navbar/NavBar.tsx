@@ -23,6 +23,10 @@ const NavBar: React.FC<Props> = ({ toggleTheme }) => {
         borderBottom: `1px solid ${
           theme.palette.mode === "light" ? "#E5E5E5" : "#252C2E"
         }`,
+        position: "fixed", // Add this line
+        top: 0, // Add this line
+        width: "100%", // Add this line
+        zIndex: 999, // Add this line
       }}
       justifyContent="space-between"
       height="10vh"

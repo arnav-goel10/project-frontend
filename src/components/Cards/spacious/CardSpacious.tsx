@@ -1,15 +1,15 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import LikeComment from "../LikeComment";
 import VideoCard from "./VideoCard"; // Import the VideoCard component
 import { cardcontent } from "./CardSpaciousList";
 import { useTheme } from "@mui/material";
+import ImageCard from "./ImageCard";
 
 const CardSpacious: React.FC<cardcontent> = ({
   image,
   title,
   text,
   video,
-  user_id,
   comments_count,
   like_count,
 }) => {
@@ -49,19 +49,7 @@ const CardSpacious: React.FC<cardcontent> = ({
       </h1>
       {image || video ? (
         <>
-          {image && (
-            <img
-              src={image}
-              alt={title}
-              style={{
-                width: "100%",
-                height: "auto",
-                objectFit: "cover",
-                borderRadius: "2rem",
-                marginTop: "1rem",
-              }}
-            />
-          )}
+          {image && <ImageCard image={image} />}
           {video && <VideoCard video={video} />}
         </>
       ) : (

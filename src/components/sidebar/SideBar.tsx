@@ -54,17 +54,34 @@ const SideBar: React.FC<Props> = ({ onCuisineClick }) => {
           borderRight: `1px solid ${
             theme.palette.mode === "light" ? "#E5E5E5" : "#252C2E"
           }`,
+          overflow: "auto", // Add this line to make the list scrollable
+          maxHeight: "calc(100vh)", // Adjust the height as per your requirement
+          scrollbarWidth: "thin", // Hide the scrollbar on Firefox
+          "&::-webkit-scrollbar": {
+            width: "0.4em",
+            background: "transparent",
+          },
+          "&::-webkit-scrollbar-thumb": {
+            background: "transparent",
+          },
         }}
       >
-        <ListSubheader
+        <Box
           sx={{
-            fontSize: "1.75rem",
-            fontWeight: "bold",
-            fontFamily: "Segoe UI",
+            overflow: "auto", // Add this line to make the subheader scrollable
+            maxHeight: "calc(100vh - 4rem)", // Adjust the height as per your requirement
           }}
         >
-          Cuisines
-        </ListSubheader>
+          <ListSubheader
+            sx={{
+              fontSize: "1.75rem",
+              fontWeight: "bold",
+              fontFamily: "Segoe UI",
+            }}
+          >
+            Cuisines
+          </ListSubheader>
+        </Box>
         <List component="nav">
           {cuisines.map((cuisine, index) => (
             <SideBarListElement

@@ -18,14 +18,13 @@ const MainPage: React.FC = () => {
   // Styled component to style the item
   const Item = styled("div")(({ theme }) => ({
     // Set the background color based on the theme mode
-    backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
+    backgroundColor: theme.palette.mode === "dark" ? "#0B1416" : "#fff",
     ...theme.typography.body2,
     padding: theme.spacing(1),
     textAlign: "center",
-    color: theme.palette.text.secondary,
+    color: theme.palette.mode === "dark" ? "#3F3B34" : "#F2F4F5",
   }));
 
-  // Get the theme from the context
   const theme = useTheme();
   return (
     <Grid
@@ -53,7 +52,18 @@ const MainPage: React.FC = () => {
             <Item>
               <TogglesBar />
             </Item>
-            <CardSpaciousList />
+            <CardSpaciousList
+              data_array={[
+                {
+                  user_id: "lol",
+                  title: "INDIAN RECIPE!!!",
+                  text: "If you want to override a component's styles using custom classes, you can use the className prop, available on each component. To override the styles of a specific part of the component, use the global classes provided by Material UI, as described in the previous sectio",
+                  like_count: 5,
+                  comments_count: 5,
+                  image: "https://picsum.photos/200",
+                },
+              ]}
+            />
           </Stack>
         </Grid>
       </Grid>
