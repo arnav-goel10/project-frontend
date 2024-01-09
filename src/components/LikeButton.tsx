@@ -21,12 +21,14 @@ const LikeButton = ({ count }: Props) => {
   };
 
   return (
-    <div style={{ marginLeft: "2rem", display: "block", width: "fit-content" }}>
+    <div>
       <FormControlLabel
         control={
           <Checkbox
-            icon={<FavoriteBorder />}
-            checkedIcon={<FavoriteIcon sx={{ color: "orangered" }} />}
+            icon={<FavoriteBorder style={{ fontSize: "2.5vw" }} />}
+            checkedIcon={
+              <FavoriteIcon sx={{ color: "orangered", fontSize: "2.5vw" }} />
+            }
             name="checkedH"
             checked={isChecked}
             onChange={handleCheckboxChange}
