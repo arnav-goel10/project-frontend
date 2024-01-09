@@ -9,19 +9,23 @@ const NewTopSort = () => {
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
   const [dashboardContent, setDashboardContent] = React.useState("New"); // Initial selection
 
+  // Open menu when button is clicked
   const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
     setAnchorEl(event.currentTarget);
   };
 
+  // Close menu when item is clicked
   const handleMenuItemClick = (clickedItem: string) => {
     setDashboardContent(clickedItem);
     setAnchorEl(null); // Close menu when item is clicked
   };
 
+  // Close menu when user clicks outside of it
   const handleClose = () => {
     setAnchorEl(null);
   };
 
+  // Icon for New
   const newIcon = (
     <NewReleasesIcon
       sx={{
@@ -29,6 +33,7 @@ const NewTopSort = () => {
       }}
     />
   );
+  // Icon for Top
   const topIcon = (
     <KeyboardDoubleArrowUpIcon
       sx={{

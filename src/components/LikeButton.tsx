@@ -11,8 +11,13 @@ interface Props {
 const LikeButton = ({ count }: Props) => {
   const [isChecked, setIsChecked] = useState(false); // Track checkbox state
 
-  const handleClick = () => {
+  const handleClick = async () => {
     console.log(isChecked ? "unliked" : "liked");
+  };
+
+  const handleCheckboxChange = async () => {
+    await handleClick();
+    setIsChecked(!isChecked); // Toggle state on change
   };
 
   return (
@@ -23,11 +28,8 @@ const LikeButton = ({ count }: Props) => {
             icon={<FavoriteBorder />}
             checkedIcon={<FavoriteIcon sx={{ color: "orangered" }} />}
             name="checkedH"
-            checked={isChecked} // Bind checked state to isChecked
-            onChange={async () => {
-              await handleClick();
-              setIsChecked(!isChecked); // Toggle state on change
-            }}
+            checked={isChecked}
+            onChange={handleCheckboxChange}
           />
         }
         label={count}

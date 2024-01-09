@@ -2,7 +2,7 @@ import { Avatar, Box, Typography } from "@mui/material";
 import React from "react";
 
 interface Props {
-  selectedCuisine?: string;
+  selectedCuisine?: string; // prop for selected cuisine
 }
 
 const HeaderMainPage: React.FC<Props> = ({ selectedCuisine }) => {
