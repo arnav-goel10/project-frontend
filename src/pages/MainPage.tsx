@@ -24,11 +24,11 @@ const MainPage: React.FC = () => {
   const theme = useTheme();
   return (
     <Grid container sx={{ bgcolor: theme.palette.primary.contrastText }}>
-      <Grid item xs={3}>
+      <Grid item xs={2.75}>
         <SideBar onCuisineClick={handleCuisineSelect} />
       </Grid>
 
-      <Grid item xs={7} sx={{ mt: "2rem", width: "100%" }}>
+      <Grid item xs={7.5} sx={{ mt: "2rem", width: "100%" }}>
         <HeaderMainPage selectedCuisine={selectedCuisine} />
 
         <Grid

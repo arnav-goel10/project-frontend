@@ -43,12 +43,12 @@ const SideBar: React.FC<Props> = ({ onCuisineClick }) => {
     <>
       <Box
         sx={{
-          width: "100%",
+          width: "95%",
           maxWidth: 360,
           bgcolor: "background.paper",
           paddingTop: "2rem",
           paddingLeft: "2rem",
-          paddingRight: "4rem",
+          paddingRight: "5rem",
           fontFamily: "fantasy",
           color: theme.palette.secondary.light,
         }}
