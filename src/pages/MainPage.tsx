@@ -57,7 +57,7 @@ const MainPage: React.FC = () => {
           </Stack>
         </Grid>
       </Grid>
-      <Grid item xs={2}>
+      <Grid item xs>
         Filter
       </Grid>
     </Grid>
