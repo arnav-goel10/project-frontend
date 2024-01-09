@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Grid, Paper, Stack, styled } from "@mui/material";
+import { Grid, Stack, styled } from "@mui/material";
 import SideBar from "../components/SideBar";
 import HeaderMainPage from "../components/HeaderMainPage";
 import TogglesBar from "../components/TogglesBar";
