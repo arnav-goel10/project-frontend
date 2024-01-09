@@ -1,18 +1,18 @@
 import React, { useState, useEffect } from "react";
 import LikeComment from "../LikeComment";
 import VideoCard from "./VideoCard"; // Import the VideoCard component
+import { cardcontent } from "./CardSpaciousList";
+import { useTheme } from "@mui/material";
 
-interface Props {
-  image?: string;
-  video?: string;
-  user_id: string;
-  title: string;
-  text: string;
-  like_count: number;
-  comments_count: number;
-}
-
-const CardSpacious: React.FC<Props> = ({ image, title, text, video }) => {
+const CardSpacious: React.FC<cardcontent> = ({
+  image,
+  title,
+  text,
+  video,
+  user_id,
+  comments_count,
+  like_count,
+}) => {
   const [isHovered, setIsHovered] = useState(false);
 
   const handleMouseEnter = () => {
@@ -22,12 +22,18 @@ const CardSpacious: React.FC<Props> = ({ image, title, text, video }) => {
   const handleMouseLeave = () => {
     setIsHovered(false);
   };
-
+  const theme = useTheme();
   return (
     <div
       style={{
         width: "auto",
-        backgroundColor: isHovered ? "lightgrey" : "white",
+        backgroundColor: isHovered
+          ? theme.palette.mode === "dark"
+            ? "#131F24"
+            : "#F2F4F5"
+          : theme.palette.mode === "dark"
+          ? "#0B1416"
+          : "white",
         padding: "0.5rem 1rem",
         borderRadius: "1rem",
         position: "relative",
@@ -38,7 +44,9 @@ const CardSpacious: React.FC<Props> = ({ image, title, text, video }) => {
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
-      <h1 style={{ marginLeft: "0.25rem" }}>{title}</h1>
+      <h1 style={{ marginLeft: "0.25rem", color: theme.palette.text.primary }}>
+        {title}
+      </h1>
       {image || video ? (
         <>
           {image && (
@@ -59,7 +67,7 @@ const CardSpacious: React.FC<Props> = ({ image, title, text, video }) => {
       ) : (
         <p style={{ overflowWrap: "break-word" }}>{text}</p>
       )}
-      <LikeComment />
+      <LikeComment likeCount={like_count} commentsCount={comments_count} />
       <div
         style={{
           position: "absolute",

@@ -28,7 +28,10 @@ const MainPage: React.FC = () => {
   // Get the theme from the context
   const theme = useTheme();
   return (
-    <Grid container sx={{ bgcolor: theme.palette.primary.contrastText }}>
+    <Grid
+      container
+      sx={{ bgcolor: theme.palette.mode === "dark" ? "#0B1416" : "white" }}
+    >
       <Grid item xs={2.75}>
         <SideBar onCuisineClick={handleCuisineSelect} />
       </Grid>

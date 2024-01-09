@@ -45,13 +45,15 @@ const SideBar: React.FC<Props> = ({ onCuisineClick }) => {
         sx={{
           width: "95%",
           maxWidth: 360,
-          bgcolor: "background.paper",
+          bgcolor: theme.palette.mode === "dark" ? "#0B1416" : "white",
           paddingTop: "2rem",
           paddingLeft: "2rem",
           paddingRight: "5rem",
           fontFamily: "fantasy",
           color: theme.palette.secondary.light,
-          borderRight: "1px solid lightgrey",
+          borderRight: `1px solid ${
+            theme.palette.mode === "light" ? "#E5E5E5" : "#252C2E"
+          }`,
         }}
       >
         <ListSubheader

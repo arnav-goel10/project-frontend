@@ -1,4 +1,4 @@
-import { Avatar, Box, Typography } from "@mui/material";
+import { Avatar, Box, Typography, useTheme } from "@mui/material";
 import React from "react";
 
 interface Props {
@@ -6,12 +6,14 @@ interface Props {
 }
 
 const HeaderMainPage: React.FC<Props> = ({ selectedCuisine }) => {
+  const theme = useTheme();
+
   return (
     <Box
       sx={{
         display: "flex",
         alignItems: "center",
-        backgroundColor: "lightgrey",
+        backgroundColor: theme.palette.mode === "dark" ? "#0B1416" : "white",
         padding: "2rem",
         borderRadius: "2rem",
         marginLeft: "0.5rem",
@@ -25,7 +27,7 @@ const HeaderMainPage: React.FC<Props> = ({ selectedCuisine }) => {
       <Typography
         variant="body1"
         fontWeight="bold"
-        sx={{ ml: 5, fontSize: 50 }}
+        sx={{ ml: 5, fontSize: 50, color: theme.palette.text.primary }}
       >
         {selectedCuisine === undefined || selectedCuisine === "All"
           ? "All Cuisines"

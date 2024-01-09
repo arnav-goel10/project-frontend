@@ -1,12 +1,17 @@
 import NewTopSort from "./NewTopSort";
 import CardViewSort from "./CardViewSort";
 import CreatePostButton from "./CreatePostButton";
-import { Grid } from "@mui/material";
+import { Grid, useTheme } from "@mui/material";
 import { Link } from "react-router-dom";
 
 const TogglesBar = () => {
+  const theme = useTheme();
   return (
-    <Grid container alignItems={"center"} textAlign={"start"} mr={"3rem"}>
+    <Grid
+      container
+      alignItems={"center"}
+      bgcolor={theme.palette.mode === "dark" ? "#0B1416" : "white"}
+    >
       <Grid item xs={2}>
         <NewTopSort />
       </Grid>

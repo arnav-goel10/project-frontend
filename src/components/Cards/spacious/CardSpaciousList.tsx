@@ -1,5 +1,17 @@
 import React from "react";
 import CardSpacious from "./CardSpacious";
+interface CardSpaciousListProps {
+  cardcontent: cardcontent[];
+}
+export interface cardcontent {
+  image?: string;
+  video?: string;
+  user_id: string;
+  title: string;
+  text: string;
+  like_count: number;
+  comments_count: number;
+}
 
 const CardSpaciousList = () => {
   return (
