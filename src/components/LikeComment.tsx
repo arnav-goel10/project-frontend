@@ -1,16 +1,11 @@
-import { Button, Stack } from "@mui/material";
-import { useState } from "react";
+import { Stack } from "@mui/material";
 import LikeButton from "./LikeButton";
 
 const LikeComment = () => {
-  const [isClick, setClick] = useState(false);
   const likecount = 3;
   return (
     <>
-      <Stack
-        direction={"row"}
-        style={{ marginTop: "0rem", marginLeft: "0rem" }}
-      >
+      <Stack direction={"row"}>
         <LikeButton count={likecount} />
       </Stack>
     </>

@@ -1,8 +1,8 @@
-import { Button, useTheme } from "@mui/material";
+import { Button } from "@mui/material";
 import { Link } from "react-router-dom";
 
 const SignUpButton = () => {
-  const theme = useTheme();
+  //const theme = useTheme();
   return (
     <Link to="/signup">
       <Button
