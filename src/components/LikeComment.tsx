@@ -7,16 +7,25 @@ const LikeComment = () => {
   const likecount = 3;
   return (
     <>
-      <Stack
-        direction="row"
-        style={{ marginLeft: "2rem", alignItems: "center" }}
-      >
-        <LikeButton count={likecount} />
-        <Link to="/comment">
-          <IconButton aria-label="Comment Section">
-            <ForumOutlinedIcon sx={{ fontSize: "2.5vw" }} />
-          </IconButton>
-        </Link>
+      <Stack direction="row" alignItems="center">
+        <div
+          style={{
+            marginLeft: "2rem",
+            backgroundColor: "lightgrey",
+            padding: "0.25rem 1rem",
+            borderRadius: "5rem",
+            display: "flex",
+            alignItems: "center", // Align icons vertically within the div
+            justifyContent: "center",
+          }}
+        >
+          <LikeButton count={likecount} />
+          <Link to="/comment">
+            <IconButton aria-label="Comment Section">
+              <ForumOutlinedIcon sx={{ fontSize: "2vw" }} />
+            </IconButton>
+          </Link>
+        </div>
       </Stack>
     </>
   );
