@@ -10,7 +10,7 @@ const LikeComment = () => {
       <Stack direction="row" alignItems="center">
         <div
           style={{
-            marginLeft: "2rem",
+            marginLeft: "0.5rem",
             backgroundColor: "#c9c9c9",
             padding: "0.25rem 1rem",
             borderRadius: "5rem",
