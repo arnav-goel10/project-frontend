@@ -7,17 +7,13 @@ import CardSpaciousList from "../components/Cards/spacious/CardSpaciousList";
 import HeaderMainPage from "../components/mainpage/HeaderMainPage";
 
 const MainPage: React.FC = () => {
-  // State to store the selected cuisine
   const [selectedCuisine, setSelectedCuisine] = useState<string>();
 
-  // Function to handle the selection of a cuisine
   const handleCuisineSelect = (cuisine: string) => {
     setSelectedCuisine(cuisine);
   };
 
-  // Styled component to style the item
   const Item = styled("div")(({ theme }) => ({
-    // Set the background color based on the theme mode
     backgroundColor: theme.palette.mode === "dark" ? "#0B1416" : "#fff",
     ...theme.typography.body2,
     padding: theme.spacing(1),
@@ -38,11 +34,7 @@ const MainPage: React.FC = () => {
         <SideBar onCuisineClick={handleCuisineSelect} />
       </Grid>
 
-      <Grid item xs={7.5} sx={{ mt: "2rem", width: "100%" }}>
-        <div style={{ position: "static", width: "100%", zIndex: 1 }}>
-          <HeaderMainPage selectedCuisine={selectedCuisine} />
-        </div>
-
+      <Grid item xs={7.5} sx={{ width: "100%" }}>
         <Grid
           item
           xs={10}
@@ -54,6 +46,7 @@ const MainPage: React.FC = () => {
           }}
         >
           <Stack direction={"column"} spacing={2} style={{ width: "90%" }}>
+            <HeaderMainPage selectedCuisine={selectedCuisine} />
             <Item>
               <div style={{ position: "static", width: "100%", zIndex: 1 }}>
                 <TogglesBar />
@@ -61,9 +54,9 @@ const MainPage: React.FC = () => {
             </Item>
             <span
               style={{
-                overflow: "auto", // Add this line to make the list scrollable
-                maxHeight: "calc(100vh)", // Adjust the height as per your requirement
-                scrollbarWidth: "thin", // Hide the scrollbar on Firefox
+                overflow: "auto",
+                maxHeight: "calc(100vh)",
+                scrollbarWidth: "thin",
               }}
             >
               <CardSpaciousList
