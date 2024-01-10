@@ -74,7 +74,8 @@ const MainPage: React.FC = () => {
                     text: "If you want to override a component's styles using custom classes, you can use the className prop, available on each component. To override the styles of a specific part of the component, use the global classes provided by Material UI, as described in the previous sectio",
                     like_count: 5,
                     comments_count: 5,
-                    image: "https://picsum.photos/200",
+                    video:
+                      "https://packaged-media.redd.it/ql1jb5jn5mbc1/pb/m2-res_1920p.mp4?m=DASHPlaylist.mpd&v=1&e=1704927600&s=791c6140c50f8fb78dbcabd09aede636ade75b67#t=0",
                   },
                   {
                     user_id: "hehehheh",
@@ -82,7 +83,8 @@ const MainPage: React.FC = () => {
                     text: "If you want to override a component's styles using custom classes, you can use the className prop, available on each component. To override the styles of a specific part of the component, use the global classes provided by Material UI, as described in the previous sectio",
                     like_count: 5,
                     comments_count: 5,
-                    image: "https://picsum.photos/200",
+                    image:
+                      "https://preview.redd.it/if-a-punjabi-bengali-tamilian-businessman-said-this-i-v0-r29qegxzqmbc1.jpeg?auto=webp&s=16d56f1bf935bb52d432514bd60e772bd4a0d43e",
                   },
                 ]}
               />

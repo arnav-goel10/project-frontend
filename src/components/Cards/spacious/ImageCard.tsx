@@ -10,8 +10,8 @@ const ImageCard: React.FC<ImageCardProps> = ({ image }) => {
   useEffect(() => {
     const image = imageRef.current;
     if (image) {
-      const imageWidth = image.naturalWidth;
-      const imageHeight = image.naturalHeight;
+      const imageWidth = image.width;
+      const imageHeight = image.height;
 
       const aspectRatio = imageWidth / imageHeight;
       const containerWidth = imageRef.current!.parentElement!.offsetWidth;
@@ -43,7 +43,7 @@ const ImageCard: React.FC<ImageCardProps> = ({ image }) => {
           left: 0,
           width: "100%",
           height: "100%",
-          objectFit: "cover", // Use "cover" for images to fill the container
+          objectFit: "contain",
           margin: "auto",
           borderRadius: "1rem",
         }}
