@@ -36,7 +36,7 @@ const ImageCard: React.FC<ImageCardProps> = ({ image }) => {
       <img
         ref={imageRef}
         src={image}
-        alt="Image"
+        alt="Card img"
         style={{
           position: "absolute",
           top: 0,
