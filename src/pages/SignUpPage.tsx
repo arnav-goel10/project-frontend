@@ -9,19 +9,26 @@ import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import { Link } from "react-router-dom";
+import axios from "axios";
 
 export default function SignUp() {
   // Handle the submit event of the form
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
-    // Prevent the default action of the form
-    event.preventDefault();
-    // Create a new FormData object from the form
-    const data = new FormData(event.currentTarget);
-    // Log the email and password to the console
-    console.log({
-      email: data.get("email"),
-      password: data.get("password"),
-    });
+    event.preventDefault(); // Prevent the default action of the form
+    const data = new FormData(event.currentTarget); // Create a new FormData object from the form̥
+
+    axios
+      .post("http://127.0.0.1:3000/users", {
+        name: data.get("firstName") + " " + data.get("lastName"),
+        email: data.get("email"),
+        password: data.get("password"),
+      })
+      .then(function (response) {
+        console.log(response);
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
   };
 
   return (
@@ -29,7 +36,7 @@ export default function SignUp() {
       <CssBaseline />
       <Box
         sx={{
-          marginTop: 8,
+          marginTop: 12,
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
