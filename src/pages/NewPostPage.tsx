@@ -45,7 +45,7 @@ export default function CreatePost() {
       <CssBaseline />
       <Box
         sx={{
-          marginTop: 8,
+          marginTop: 15,
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
@@ -85,7 +85,7 @@ export default function CreatePost() {
               />
             </Grid>
             <Grid item xs={12}>
-              image uploaer
+              <input type="file" accept="image/*, video/*" />
             </Grid>
             <Grid item xs={12}>
               <Button

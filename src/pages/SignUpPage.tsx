@@ -1,4 +1,5 @@
 import * as React from "react";
+import { Navigate, useNavigate } from "react-router-dom";
 import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
 import CssBaseline from "@mui/material/CssBaseline";
@@ -12,6 +13,8 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 
 export default function SignUp() {
+  const navigate = useNavigate(); // Access the navigate object
+
   const [formErrors, setFormErrors] = React.useState({
     email: "",
     password: "",
@@ -107,6 +110,7 @@ export default function SignUp() {
         })
         .then(function (response) {
           console.log(response);
+          navigate("/login"); // Navigate to /login after successful API post
         })
         .catch(function (error) {
           console.log(error);
