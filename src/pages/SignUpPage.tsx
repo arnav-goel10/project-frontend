@@ -33,27 +33,49 @@ export default function SignUp() {
     const password = data.get("password") as string;
     const firstName = data.get("firstName") as string;
 
-    if (!email) {
+    function validEmail(email: string) {
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (email.length > 0) {
+        return emailRegex.test(email);
+      }
+      return false;
+    }
+
+    function validName(name: string) {
+      if (name.length > 0) {
+        return true;
+      }
+      return false;
+    }
+
+    function validPassword(password: string) {
+      if (password.length > 8) {
+        return true;
+      }
+      return false;
+    }
+
+    if (!validEmail(email)) {
       setFormErrors((prevErrors) => ({
         ...prevErrors,
-        email: "Email is required",
+        email: "Input correct Email",
       }));
     }
 
-    if (!password) {
+    if (!validPassword(password)) {
       setFormErrors((prevErrors) => ({
         ...prevErrors,
-        password: "Password is required",
+        password: "Password should be atleast 8 digits",
       }));
     }
 
-    if (!firstName) {
+    if (!validName(firstName)) {
       setFormErrors((prevErrors) => ({
         ...prevErrors,
         firstName: "First Name is required",
       }));
     }
-    if (true) {
+    if (validEmail(email) && validName(firstName) && validPassword(password)) {
       axios
         .post("http://127.0.0.1:3000/users", {
           name: firstName + " " + data.get("lastName"),
