@@ -16,6 +16,7 @@ export default function SignUp() {
     email: "",
     password: "",
     firstName: "",
+    lastName: "",
   });
 
   // Handle the submit event of the form
@@ -27,11 +28,13 @@ export default function SignUp() {
       email: "",
       password: "",
       firstName: "",
+      lastName: "",
     });
 
     const email = data.get("email") as string;
     const password = data.get("password") as string;
     const firstName = data.get("firstName") as string;
+    const lastName = data.get("lastName") as string;
 
     function validEmail(email: string) {
       const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -41,8 +44,15 @@ export default function SignUp() {
       return false;
     }
 
-    function validName(name: string) {
-      if (name.length > 0) {
+    function validFirst(first: string) {
+      if (first.length > 0) {
+        return true;
+      }
+      return false;
+    }
+
+    function validLast(last: string) {
+      if (last.length > 0) {
         return true;
       }
       return false;
@@ -69,16 +79,29 @@ export default function SignUp() {
       }));
     }
 
-    if (!validName(firstName)) {
+    if (!validFirst(firstName)) {
       setFormErrors((prevErrors) => ({
         ...prevErrors,
         firstName: "First Name is required",
       }));
     }
-    if (validEmail(email) && validName(firstName) && validPassword(password)) {
+
+    if (!validLast(lastName)) {
+      setFormErrors((prevErrors) => ({
+        ...prevErrors,
+        lastName: "Last Name is required",
+      }));
+    }
+
+    if (
+      validEmail(email) &&
+      validFirst(firstName) &&
+      validLast(lastName) &&
+      validPassword(password)
+    ) {
       axios
         .post("http://127.0.0.1:3000/users", {
-          name: firstName + " " + data.get("lastName"),
+          name: firstName + " " + lastName,
           email: email,
           password: password,
         })
@@ -130,6 +153,8 @@ export default function SignUp() {
                 label="Last Name"
                 name="lastName"
                 autoComplete="family-name"
+                error={!!formErrors.lastName}
+                helperText={formErrors.lastName}
               />
             </Grid>
             <Grid item xs={12}>
