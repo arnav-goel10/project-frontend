@@ -12,23 +12,61 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 
 export default function SignUp() {
+  const [formErrors, setFormErrors] = React.useState({
+    email: "",
+    password: "",
+    firstName: "",
+  });
+
   // Handle the submit event of the form
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault(); // Prevent the default action of the form
     const data = new FormData(event.currentTarget); // Create a new FormData object from the form̥
 
-    axios
-      .post("http://127.0.0.1:3000/users", {
-        name: data.get("firstName") + " " + data.get("lastName"),
-        email: data.get("email"),
-        password: data.get("password"),
-      })
-      .then(function (response) {
-        console.log(response);
-      })
-      .catch(function (error) {
-        console.log(error);
-      });
+    setFormErrors({
+      email: "",
+      password: "",
+      firstName: "",
+    });
+
+    const email = data.get("email") as string;
+    const password = data.get("password") as string;
+    const firstName = data.get("firstName") as string;
+
+    if (!email) {
+      setFormErrors((prevErrors) => ({
+        ...prevErrors,
+        email: "Email is required",
+      }));
+    }
+
+    if (!password) {
+      setFormErrors((prevErrors) => ({
+        ...prevErrors,
+        password: "Password is required",
+      }));
+    }
+
+    if (!firstName) {
+      setFormErrors((prevErrors) => ({
+        ...prevErrors,
+        firstName: "First Name is required",
+      }));
+    }
+    if (true) {
+      axios
+        .post("http://127.0.0.1:3000/users", {
+          name: firstName + " " + data.get("lastName"),
+          email: email,
+          password: password,
+        })
+        .then(function (response) {
+          console.log(response);
+        })
+        .catch(function (error) {
+          console.log(error);
+        });
+    }
   };
 
   return (
@@ -59,11 +97,12 @@ export default function SignUp() {
                 id="firstName"
                 label="First Name"
                 autoFocus
+                error={!!formErrors.firstName}
+                helperText={formErrors.firstName}
               />
             </Grid>
             <Grid item xs={12} sm={6}>
               <TextField
-                required
                 fullWidth
                 id="lastName"
                 label="Last Name"
@@ -79,6 +118,8 @@ export default function SignUp() {
                 label="Email Address"
                 name="email"
                 autoComplete="email"
+                error={!!formErrors.email}
+                helperText={formErrors.email}
               />
             </Grid>
             <Grid item xs={12}>
@@ -90,6 +131,8 @@ export default function SignUp() {
                 type="password"
                 id="password"
                 autoComplete="new-password"
+                error={!!formErrors.password}
+                helperText={formErrors.password}
               />
             </Grid>
           </Grid>
