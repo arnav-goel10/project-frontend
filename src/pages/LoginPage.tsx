@@ -23,7 +23,7 @@ export default function SignIn() {
         email: data.get("email"),
         password: data.get("password"),
       })
-      .then(function (response) {
+      .then(async function (response) {
         console.log(response);
         const jwt = response.data.jwt; // Extract the JWT from the response
         localStorage.setItem("jwt", jwt); // Store the JWT in local storage
