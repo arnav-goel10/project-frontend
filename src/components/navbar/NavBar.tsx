@@ -4,6 +4,7 @@ import ThemeChangeButton from "./ThemeChangeButton";
 import Logo from "./Logo";
 import SignUpButton from "./SignUpButton";
 import SearchBar from "./SearchBar";
+import SignOutButton from "./SignOutButton";
 
 interface Props {
   toggleTheme: () => void;
@@ -41,6 +42,7 @@ const NavBar: React.FC<Props> = ({ toggleTheme }) => {
           <LoginButton />
           <SignUpButton />
         </Box>
+        <SignOutButton />
         <ThemeChangeButton toggleTheme={toggleTheme} />
       </Box>
     </Box>
