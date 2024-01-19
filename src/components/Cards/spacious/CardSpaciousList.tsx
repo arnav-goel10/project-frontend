@@ -19,6 +19,7 @@ const CardSpaciousList = ({ data_array }: data) => {
     <>
       {data_array.map((data) => (
         <CardSpacious
+          key={data.user_id}
           user_id={data.user_id}
           title={data.title}
           text={data.text}
