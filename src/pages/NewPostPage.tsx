@@ -14,6 +14,7 @@ export default function CreatePost() {
   const [postData, setPostData] = React.useState({
     title: "",
     text: "",
+    user_id: 0,
     image: null,
     video: null,
   });

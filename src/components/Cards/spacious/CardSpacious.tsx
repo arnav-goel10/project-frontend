@@ -6,6 +6,7 @@ import { useTheme } from "@mui/material";
 import ImageCard from "./ImageCard";
 
 const CardSpacious: React.FC<cardcontent> = ({
+  user_id,
   image,
   title,
   text,
