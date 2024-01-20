@@ -102,12 +102,14 @@ export default function SignUp() {
       validLast(lastName) &&
       validPassword(password)
     ) {
+      const request = {
+        name: firstName + " " + lastName,
+        email: email,
+        password: password,
+      };
+      console.log(request);
       axios
-        .post("http://127.0.0.1:3000/users", {
-          name: firstName + " " + lastName,
-          email: email,
-          password: password,
-        })
+        .post("http://127.0.0.1:3000/users", request)
         .then(function (response) {
           console.log(response);
           navigate("/login"); // Navigate to /login after successful API post
