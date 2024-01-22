@@ -11,27 +11,13 @@ import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import { Link, useNavigate } from "react-router-dom";
-import axios from "axios";
 
 export default function SignIn() {
   const navigate = useNavigate(); // Access the navigate object
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
-    axios
-      .post("http://127.0.0.1:3000/sessions", {
-        email: data.get("email"),
-        password: data.get("password"),
-      })
-      .then(async function (response) {
-        console.log(response);
-        const jwt = response.data.jwt; // Extract the JWT from the response
-        localStorage.setItem("jwt", jwt); // Store the JWT in local storage
-        navigate("/");
-      })
-      .catch(function (error) {
-        console.log(error);
-      });
+    //send post requestss
   };
 
   return (

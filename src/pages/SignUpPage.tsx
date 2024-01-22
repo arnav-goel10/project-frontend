@@ -10,7 +10,6 @@ import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import { Link } from "react-router-dom";
-import axios from "axios";
 
 export default function SignUp() {
   const navigate = useNavigate(); // Access the navigate object
@@ -108,15 +107,18 @@ export default function SignUp() {
         password: password,
       };
       console.log(request);
-      axios
-        .post("http://127.0.0.1:3000/users", request)
-        .then(function (response) {
-          console.log(response);
-          navigate("/login"); // Navigate to /login after successful API post
-        })
-        .catch(function (error) {
-          console.log(error);
-        });
+      fetch("http://localhost:3000/api/v1/users", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          user: request,
+        }),
+      })
+        .then(() => navigate("/login"))
+        .then(console.log);
     }
   };
 

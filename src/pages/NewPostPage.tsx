@@ -8,7 +8,6 @@ import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import MapsUgcIcon from "@mui/icons-material/MapsUgc";
-import axios from "axios";
 
 export default function CreatePost() {
   // State to store form values
@@ -39,16 +38,6 @@ export default function CreatePost() {
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     // Handle form submission logic here, e.g., send data to a server
-
-    axios
-      .post("http://127.0.0.1:3000/recipes", postData)
-      .then(async function (response) {
-        console.log(response);
-        // Redirect to a success page or perform other actions
-      })
-      .catch(function (error) {
-        console.log(error);
-      });
   };
 
   return (
